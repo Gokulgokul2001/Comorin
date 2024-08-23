@@ -77,42 +77,53 @@ public class Division {
     }
 }
 
-6.public class Arraylist {
-    public static void main(String[] args) {
-        int []arr={10,2,40,20};
-        int n=arr.length;
-        for(int i=0;i<=n;)
-    }
-}
-7.public class Inheritance {
-    public static void main(String[] args) {
+6.import java.util.ArrayList;
+import java.util.Scanner;
 
-    }
-    public class car1{
-        int carmodel=10;
-        String make="honda";
-        int date=2024
-    }
-    public 
-    
-}
-8.public class Sound {
+public class SumofArray {
     public static void main(String[] args) {
-        
-    }
-     animal(String sound){
-        System.out.println("cat meow");
-        System.out.println("Dog bark");
+        ArrayList<Integer> numbers = new ArrayList<>();
+        int[] arr = {12, 23, 34, 55};
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            numbers.add(arr[i]);
+        }
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        System.out.println("The sum of the array elements is: " + sum);
     }
 }
-9.import java.io.BufferedInputStream;
 
-public class reader {
+7.import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Reader {
     public static void main(String[] args) {
-        BufferedInputStream is=new BufferedInputStream(D:\text.txt);
-        System.out.println("is");
-
+        try {
+			FileInputStream fis=new FileInputStream("E:\\input.txt");
+			int i;
+			while((i=fis.read())!=-1)
+			{
+				System.out.print((char)i);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+			FileOutputStream fos=new FileOutputStream("E:\\output.txt");
+			byte b[]="hello".getBytes();
+			fos.write(b);
+			fos.flush();
+			fos.close();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 }
+
 
 
